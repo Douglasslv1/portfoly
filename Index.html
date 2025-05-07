@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="import" href="socialmedia/Index.html">
+    <link rel="stylesheet" href="./Style.module.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="FrontPage">
+        <nav class="NavMenu">
+          <ul>
+            <li><a href="#about" id="aboutLink">About me</a></li>
+            <li><a href="#box">Skills</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="Informs">
+          <div class="Description">
+            <h2>Olá, me chamo</h2>
+            <h1>Douglas Rodrigues</h1>
+            <h4>Desenvolvedor FullStack!</h4>
+          </div>
+          <img src="./img/douglas.png" alt="ImageLogo" />
+        </div>
+        <div class="About" id="about">
+          <h1>SOBRE MIM</h1>
+          <p>
+            Profissional graduado em Arquitetura, com mais de dois anos de
+            experiência no desenvolvimento de projetos de execução, modelagem 3D
+            e gestão de construção. Concluído dois cursos intensivos em
+            programação Frontend (JavaScript) e Backend (Python), buscando
+            combinar tecnologia e inovação no desenvolvimento de soluções
+            arquitetônicas e tecnológicas. Capacidade de trabalhar de forma
+            independente com ênfase em eficácia, criatividade e melhoria
+            contínua.
+          </p>
+        </div>
+      </div>
+      <section class="Skills">
+        <h1 id="box">SKILLS</h1>
+        <div class="Ability">
+          <img src="img/html.png" alt="Html">
+          <img src="img/css.png" alt="Css">
+          <img src="img/react.png" alt="React">
+          <img src="img/js.png" alt="JavaScript">
+          <img src="img/python.png" alt="Python">
+          <img src="img/FIGMA.png" alt="Figma">
+          <img src="img/GIT.png" alt="Git">
+        </div>
+      </section>
+      
+    </header>
+    <script>
+      const aboutLink = document.getElementById("aboutLink");
+      const aboutSection = document.getElementById("about");
+    
+      aboutLink.addEventListener("click", () => {
+        // Remove a classe se já estiver presente, para reiniciar a animação
+        aboutSection.classList.remove("blinking");
+    
+        // Força o reflow (necessário para reiniciar a animação)
+        void aboutSection.offsetWidth;
+    
+        // Adiciona a classe que faz "piscar"
+        aboutSection.classList.add("blinking");
+      });
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background: linear-gradient(to right, rgb(235, 235, 235) 50%, rgb(48, 48, 48) 50%);
+    margin: 0;
+}
+
+/*A partir daqui se configura a parte superior inicial do NAVMENU e descrições*/
+
+.FrontPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.NavMenu {
+    display: flex;
+    justify-content: end;
+}
+
+.NavMenu ul {
+    display: flex;
+    list-style: none;
+}
+
+li a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+li a:hover{
+    color: orange;
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.Description {
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.Description h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 29px;
+}
+
+.Description h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 29px;
+}
+
+.Description h1 {
+    font-size: 49px;
+}
+
+.Informs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Informs img {
+    width: 550px;
+}
+
+.About {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+.About h1 {
+    margin-inline: 5%;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+
+}
+
+.About p {
+    margin-inline: 5%;
+    margin-bottom: 2%;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth"100;
+}
+
+/*A partir daqui Configura-se as Skilss*/
+
+.Skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.Skills h1{
+    font-family: "Open Sans", sans-serif;
+    font-size: 49px;
+}
+
+.Ability img{
+    width: 190px;
+
+}
+
+.Ability img:hover{
+    transition: 0.5s;
+    transform: rotate(360deg);
+}
+
+
+#box {
+    position: relative;
+    padding: 10px;
+    color: black;
+  }
+  
+  /* Quina superior esquerda */
+  #box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid orange;
+    border-left: 3px solid orange;
+  }
+  
+  /* Quina inferior direita */
+  #box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid orange;
+    border-right: 3px solid orange;
+  }
+  
+
+
+  /* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .Informs {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .Description h1 {
+      font-size: 36px;
+    }
+  
+    .Description h2,
+    .Description h4 {
+      font-size: 24px;
+    }
+  
+    .Ability img {
+      width: 100px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .NavMenu {
+      justify-content: center;
+    }
+  
+    .NavMenu ul {
+      align-items: center;
+      gap: 10px;
+    }
+
+    li a{
+        color: orange;
+    }
+
+    li a:hover{
+        color: blue;
+    }
+  
+    .Description h1 {
+      font-size: 32px;
+    }
+  
+    .Informs img {
+      width: 300px;
+    }
+  
+    .Skills h1 {
+      font-size: 36px;
+    }
+  
+    .Ability img {
+      width: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Description h1 {
+      font-size: 28px;
+    }
+  
+    .Description h2,
+    .Description h4 {
+      font-size: 20px;
+    }
+  
+    .Informs img {
+      width: 250px;
+    }
+  
+    .Ability img {
+      width: 60px;
+    }
+  
+    .Skills h1 {
+      font-size: 28px;
+    }
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      background-color: black;
+    }
+    50% {
+      background-color: orange;
+    }
+  }
+  
+  .About.blinking {
+    animation: blink 1s ease-in-out;
+  }
+  
+
+
+
+
+
+
+

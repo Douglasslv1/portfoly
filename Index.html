@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <link rel="import" href="socialmedia/Index.html">
+    <link rel="import" href="socialmedia/Index.html" />
     <link rel="stylesheet" href="./Style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
           <ul>
             <li><a href="#about" id="aboutLink">About me</a></li>
             <li><a href="#box">Skills</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="https://wa.me/5581999679376?text=Ol%C3%A1%20Douglas,%20vim%20atrav%C3%A9s%20do%20seu%20portf%C3%B3lio%20online!">Contact</a></li>
           </ul>
         </nav>
         <div class="Informs">
@@ -42,32 +42,68 @@
       <section class="Skills">
         <h1 id="box">SKILLS</h1>
         <div class="Ability">
-          <img src="img/html.png" alt="Html">
-          <img src="img/css.png" alt="Css">
-          <img src="img/react.png" alt="React">
-          <img src="img/js.png" alt="JavaScript">
-          <img src="img/python.png" alt="Python">
-          <img src="img/FIGMA.png" alt="Figma">
-          <img src="img/GIT.png" alt="Git">
+          <img src="img/html.png" alt="Html" />
+          <img src="img/css.png" alt="Css" />
+          <img src="img/react.png" alt="React" />
+          <img src="img/js.png" alt="JavaScript" />
+          <img src="img/python.png" alt="Python" />
+          <img src="img/FIGMA.png" alt="Figma" />
+          <img src="img/GIT.png" alt="Git" />
         </div>
       </section>
-      
     </header>
     <script>
       const aboutLink = document.getElementById("aboutLink");
       const aboutSection = document.getElementById("about");
-    
+
       aboutLink.addEventListener("click", () => {
         // Remove a classe se já estiver presente, para reiniciar a animação
         aboutSection.classList.remove("blinking");
-    
+
         // Força o reflow (necessário para reiniciar a animação)
         void aboutSection.offsetWidth;
-    
+
         // Adiciona a classe que faz "piscar"
         aboutSection.classList.add("blinking");
       });
     </script>
-    
+    <footer class="Footer">
+      <div class="InfoContact">
+        <h2>douglas.aarq95@gmail.com</h2>
+        <h2>+55 81 99967-9376</h2>
+      </div>
+      <div class="tooltip-container">
+        <div class="tooltip">
+          <div class="profile">
+            <div class="user">
+              <div class="img"></div>
+              <div class="details">
+                <div class="name">User</div>
+                <div class="username">@Douglas Alves</div>
+              </div>
+            </div>
+            <div class="about">100+ Connections</div>
+          </div>
+        </div>
+        <div class="text">
+          <a class="icon" href="https://www.linkedin.com/in/douglas-alves-6553871a2/">
+            <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-linkedin">
+                <svg viewBox="0 0 448 512" height="1em">
+                  <path
+                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="text">LinkedIn</div>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
